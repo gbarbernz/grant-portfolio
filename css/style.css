@@ -1,0 +1,2316 @@
+/* =====================================================
+   GRANT H-BARBER
+   LEARNING DESIGN PORTFOLIO
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #17201d;
+  background: #f4f3ef;
+
+  line-height: 1.6;
+
+  width: 100%;
+  overflow-x: hidden;
+
+  /* space for fixed header */
+  padding-top: 76px;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+
+/* stops fixed header covering anchor sections */
+
+#work,
+#capabilities,
+#about,
+#contact {
+  scroll-margin-top: 76px;
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 76px;
+
+  z-index: 1000;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 1fr)
+    auto
+    minmax(360px, 1fr);
+
+  align-items: center;
+
+  padding: 0 6%;
+
+  background-color: #0a2a40;
+
+  box-shadow:
+    0 2px 12px
+    rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* NAME - LEFT */
+
+.name-logo {
+
+  justify-self: start;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.2s ease;
+}
+
+
+.name-logo:hover {
+  opacity: 0.7;
+}
+
+
+
+/* CENTRE IMAGE LOGO */
+
+.centre-logo {
+
+  justify-self: center;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.centre-logo img {
+
+  height: 46px;
+
+  width: auto;
+
+  display: block;
+}
+
+
+
+/* NAVIGATION - RIGHT */
+
+.site-header nav {
+
+  justify-self: end;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.site-header nav a {
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease;
+}
+
+
+.site-header nav a:hover {
+  opacity: 0.6;
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+  min-height: calc(100vh - 76px);
+
+  display: grid;
+
+  grid-template-columns:
+    1.05fr
+    0.95fr;
+
+  align-items: stretch;
+
+  background: #f4f3ef;
+}
+
+
+.hero-content {
+
+  padding:
+    110px
+    8%
+    100px
+    12%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.eyebrow {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 24px;
+}
+
+
+.hero h1 {
+
+  font-size:
+    clamp(48px, 5.8vw, 92px);
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  font-weight: 600;
+
+  max-width: 850px;
+}
+
+
+.intro {
+
+  font-size: 19px;
+
+  line-height: 1.65;
+
+  max-width: 620px;
+
+  margin-top: 35px;
+
+  color: #4c5551;
+}
+
+
+
+/* BUTTON */
+
+.button {
+
+  display: inline-block;
+
+  width: fit-content;
+
+  background: #91aa9d;
+
+  color: #ffffff;
+
+  padding: 15px 27px;
+
+  margin-top: 36px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.button:hover {
+
+  transform: translateY(-2px);
+
+  background: #34443e;
+}
+
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image {
+
+  padding:
+    35px
+    6%
+    35px
+    0;
+}
+
+
+.image-placeholder {
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 600px;
+
+  background: #c2d3c9;
+
+  color: #53645c;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 6px;
+
+  text-align: center;
+}
+
+
+.image-placeholder span {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.image-placeholder small {
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  opacity: 0.7;
+}
+
+
+
+/* =====================================================
+   STATEMENT
+===================================================== */
+
+.statement {
+
+  padding:
+    130px
+    12%;
+
+  background: #0a2a40;
+
+  color: #ffffff;
+}
+
+
+.statement-text {
+
+  max-width: 1150px;
+
+  font-size:
+    clamp(32px, 4.3vw, 66px);
+
+  line-height: 1.12;
+
+  letter-spacing: -2px;
+
+  font-weight: 400;
+}
+
+
+.statement-text strong {
+
+  color: #c2d3c9;
+
+  font-weight: 500;
+}
+
+
+
+/* =====================================================
+   SELECTED WORK
+===================================================== */
+
+.work {
+
+  background: #ffffff;
+
+  padding:
+    120px
+    7%;
+}
+
+
+.section-heading {
+
+  display: grid;
+
+  grid-template-columns:
+    1.3fr
+    0.7fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+
+.section-heading h2 {
+
+  font-size:
+    clamp(38px, 4vw, 64px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+
+.section-intro {
+
+  max-width: 430px;
+
+  color: #66706c;
+
+  font-size: 17px;
+}
+
+
+
+/* PROJECT GRID */
+
+.project-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    80px
+    40px;
+}
+
+
+.project {
+  cursor: pointer;
+}
+
+
+.project-image {
+
+  aspect-ratio: 4 / 3;
+
+  min-height: 0;
+
+  margin-bottom: 25px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.project:hover .project-image {
+  transform: translateY(-5px);
+}
+
+
+.project-category {
+
+  font-size: 11px;
+
+  letter-spacing: 1.6px;
+
+  font-weight: 700;
+
+  color: #69736f;
+}
+
+
+.project h3 {
+
+  font-size: 27px;
+
+  margin:
+    8px
+    0
+    10px;
+}
+
+
+.project p:not(.project-category) {
+
+  color: #606965;
+
+  max-width: 470px;
+}
+
+
+.project-link {
+
+  display: inline-block;
+
+  margin-top: 18px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid #0a2a40;
+
+  padding-bottom: 2px;
+}
+
+
+
+/* =====================================================
+   CAPABILITIES
+===================================================== */
+
+.capabilities {
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.2fr;
+
+  gap: 100px;
+
+  padding:
+    140px
+    10%;
+
+  background: #f4f3ef;
+}
+
+
+.capabilities-heading h2 {
+
+  font-size:
+    clamp(40px, 4.5vw, 70px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+
+.capabilities-list {
+
+  border-top:
+    1px solid #aeb5b1;
+}
+
+
+.capability {
+
+  display: grid;
+
+  grid-template-columns:
+    60px
+    1fr;
+
+  gap: 25px;
+
+  padding:
+    35px
+    0;
+
+  border-bottom:
+    1px solid #aeb5b1;
+}
+
+
+.capability > span {
+
+  font-size: 12px;
+
+  color: #75807b;
+}
+
+
+.capability h3 {
+
+  font-size: 25px;
+
+  margin-bottom: 8px;
+}
+
+
+.capability p {
+
+  color: #626c67;
+
+  max-width: 560px;
+}
+
+
+
+/* =====================================================
+   FEATURE
+===================================================== */
+
+.feature {
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    0.85fr;
+
+  min-height: 700px;
+
+  background: #ffffff;
+}
+
+
+.feature-image {
+
+  padding:
+    60px
+    0
+    60px
+    7%;
+}
+
+
+.feature-image .image-placeholder {
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 580px;
+}
+
+
+.feature-copy {
+
+  padding:
+    120px
+    12%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.feature-copy h2 {
+
+  font-size:
+    clamp(40px, 4.5vw, 68px);
+
+  line-height: 1.02;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 35px;
+}
+
+
+.feature-copy > p:not(.eyebrow) {
+
+  font-size: 18px;
+
+  color: #5c6661;
+
+  margin-bottom: 20px;
+
+  max-width: 520px;
+}
+
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    0.9fr;
+
+  gap: 100px;
+
+  padding:
+    140px
+    12%;
+
+  background: #c2d3c9;
+}
+
+
+.about-title h2 {
+
+  font-size:
+    clamp(42px, 5vw, 76px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+
+.about-copy {
+
+  align-self: end;
+}
+
+
+.about-copy p {
+
+  margin-bottom: 22px;
+
+  font-size: 17px;
+}
+
+
+.about-copy .large-copy {
+
+  font-size: 24px;
+
+  line-height: 1.45;
+
+  font-weight: 500;
+}
+
+
+.text-link {
+
+  display: inline-block;
+
+  margin-top: 15px;
+
+  font-weight: 700;
+
+  border-bottom:
+    1px solid #0a2a40;
+}
+
+
+
+/* =====================================================
+   PHILOSOPHY
+===================================================== */
+
+.philosophy {
+
+  padding:
+    150px
+    12%;
+
+  background: #ffffff;
+}
+
+
+.philosophy blockquote {
+
+  font-size:
+    clamp(48px, 6vw, 94px);
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+
+  font-weight: 600;
+
+  max-width: 1200px;
+}
+
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+
+  padding:
+    140px
+    12%;
+
+  background: #0a2a40;
+
+  color: #ffffff;
+}
+
+
+.contact h2 {
+
+  font-size:
+    clamp(45px, 6vw, 88px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+
+.contact-copy {
+
+  max-width: 550px;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #c2d3c9;
+
+  margin-top: 35px;
+}
+
+
+.button.light {
+
+  background: #ffffff;
+
+  color: #0a2a40;
+}
+
+
+.button.light:hover {
+  background: #c2d3c9;
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+  padding:
+    35px
+    7%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  background: #0a2a40;
+
+  color: #aab2ae;
+
+  border-top:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-to-top {
+
+  position: fixed;
+
+  right: 28px;
+
+  bottom: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    12px
+    17px;
+
+  border: none;
+
+  background: #295a9a;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(10px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  z-index: 900;
+}
+
+
+.back-to-top.visible {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0);
+}
+
+
+.back-to-top:hover {
+
+  background: #44433e;
+
+  transform:
+    translateY(-2px);
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+
+  .site-header {
+
+    grid-template-columns:
+      1fr
+      auto
+      1fr;
+
+    padding:
+      0
+      4%;
+  }
+
+
+  .name-logo {
+    font-size: 15px;
+  }
+
+
+  .centre-logo img {
+    height: 40px;
+  }
+
+
+  .site-header nav {
+    gap: 18px;
+  }
+
+
+  .site-header nav a {
+    font-size: 13px;
+  }
+
+
+  .hero {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero-content {
+
+    padding:
+      100px
+      7%
+      80px;
+  }
+
+
+  .hero-image {
+
+    padding:
+      0
+      7%
+      70px;
+  }
+
+
+  .image-placeholder {
+    min-height: 450px;
+  }
+
+
+  .section-heading {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .project-grid {
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap:
+      60px
+      25px;
+  }
+
+
+  .capabilities {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .feature {
+    grid-template-columns: 1fr;
+  }
+
+
+  .feature-image {
+
+    padding:
+      60px
+      7%
+      0;
+  }
+
+
+  .feature-copy {
+
+    padding:
+      80px
+      7%;
+  }
+
+
+  .about {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+
+  body {
+    padding-top: 70px;
+  }
+
+
+  .site-header {
+
+    height: 70px;
+
+    padding:
+      0
+      5%;
+
+    grid-template-columns:
+      1fr
+      auto;
+  }
+
+
+  .name-logo {
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+  }
+
+
+  /*
+  Keep logo visible,
+  but place it beside the name on smaller screens.
+  */
+
+  .centre-logo {
+
+    justify-self: end;
+  }
+
+
+  .centre-logo img {
+    height: 36px;
+  }
+
+
+  /*
+  Hide desktop navigation on small screens
+  so the header stays clean.
+  */
+
+  .site-header nav {
+    display: none;
+  }
+
+
+  .hero {
+
+    min-height: auto;
+  }
+
+
+  .hero-content {
+
+    padding:
+      75px
+      6%
+      60px;
+  }
+
+
+  .hero h1 {
+
+    font-size:
+      clamp(48px, 14vw, 72px);
+
+    letter-spacing: -3px;
+  }
+
+
+  .intro {
+    font-size: 17px;
+  }
+
+
+  .hero-image {
+
+    padding:
+      0
+      6%
+      50px;
+  }
+
+
+  .image-placeholder {
+    min-height: 380px;
+  }
+
+
+  .statement {
+
+    padding:
+      90px
+      7%;
+  }
+
+
+  .statement-text {
+    letter-spacing: -1px;
+  }
+
+
+  .work {
+
+    padding:
+      90px
+      6%;
+  }
+
+
+  .project-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .capabilities {
+
+    padding:
+      90px
+      7%;
+  }
+
+
+  .capabilities-heading h2 {
+    letter-spacing: -2px;
+  }
+
+
+  .feature-image .image-placeholder {
+    min-height: 380px;
+  }
+
+
+  .feature-copy h2 {
+    letter-spacing: -2px;
+  }
+
+
+  .about {
+
+    padding:
+      100px
+      7%;
+  }
+
+
+  .about-title h2 {
+    letter-spacing: -2px;
+  }
+
+
+  .philosophy {
+
+    padding:
+      100px
+      7%;
+  }
+
+
+  .philosophy blockquote {
+    letter-spacing: -2px;
+  }
+
+
+  .contact {
+
+    padding:
+      100px
+      7%;
+  }
+
+
+  .contact h2 {
+    letter-spacing: -2px;
+  }
+
+
+  footer {
+
+    padding:
+      30px
+      6%;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+
+  .back-to-top {
+
+    right: 18px;
+
+    bottom: 18px;
+
+    width: 44px;
+
+    height: 44px;
+
+    padding: 0;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 17px;
+  }
+
+
+  .back-to-top span {
+    display: none;
+  }
+
+}/* =====================================================
+   CASE STUDY PAGES
+===================================================== */
+
+
+/* ---------- CASE HERO ---------- */
+
+.case-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+
+  padding: 120px 10% 90px;
+
+  background: #f4f3ef;
+
+  align-items: end;
+}
+
+
+.case-hero-copy h1 {
+  font-size: clamp(70px, 10vw, 150px);
+  line-height: 0.82;
+  letter-spacing: -7px;
+  font-weight: 600;
+}
+
+
+.case-intro {
+  max-width: 650px;
+  margin-top: 45px;
+
+  font-size: 21px;
+  line-height: 1.6;
+
+  color: #59635e;
+}
+
+
+.case-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.case-number span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+
+.case-number strong {
+  font-size: 90px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+
+
+/* ---------- CASE HERO IMAGE ---------- */
+
+.case-hero-image {
+  padding: 0 5% 100px;
+  background: #f4f3ef;
+}
+
+
+.case-hero-image .image-placeholder {
+  width: 100%;
+  min-height: 680px;
+}
+
+
+
+/* ---------- PROJECT OVERVIEW ---------- */
+
+.project-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+
+  padding: 130px 10%;
+
+  background: white;
+}
+
+
+.overview-heading h2 {
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -3px;
+
+  max-width: 650px;
+}
+
+
+.project-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0 40px;
+
+  align-content: start;
+}
+
+
+.project-details > div {
+  padding: 20px 0;
+
+  border-top: 1px solid #c4c9c6;
+}
+
+
+.project-details span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: #7a847f;
+}
+
+
+.project-details p {
+  margin-top: 5px;
+}
+
+
+
+/* ---------- TEXT SECTIONS ---------- */
+
+.case-text-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  padding: 140px 10%;
+
+  background: #0a2a40;
+  color: white;
+}
+
+
+.case-text-section.light-green {
+  background: #c2d3c9;
+  color: #0a2a40;
+}
+
+
+.case-text-section h2 {
+  font-size: clamp(42px, 5vw, 74px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  max-width: 700px;
+}
+
+
+.case-body-copy {
+  align-self: end;
+
+  max-width: 650px;
+}
+
+
+.case-body-copy p {
+  margin-bottom: 24px;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+.case-body-copy .lead {
+  font-size: 25px;
+
+  line-height: 1.45;
+}
+
+
+
+/* ---------- FULL IMAGE ---------- */
+
+.case-full-image {
+  padding: 80px 7%;
+
+  background: white;
+}
+
+
+.case-full-image .image-placeholder {
+  min-height: 650px;
+}
+
+
+
+/* ---------- GALLERY ---------- */
+
+.case-gallery {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+
+  padding: 120px 7%;
+
+  background: white;
+}
+
+
+.case-gallery .image-placeholder {
+  aspect-ratio: 4 / 3;
+}
+
+
+.case-gallery p {
+  margin-top: 14px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+}
+
+
+
+/* ---------- PROCESS ---------- */
+
+.case-process {
+  padding: 140px 8%;
+
+  background: #f4f3ef;
+}
+
+
+.case-process > h2 {
+  font-size: clamp(42px, 5vw, 75px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  max-width: 850px;
+
+  margin-bottom: 80px;
+}
+
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  border-top: 1px solid #adb4b0;
+}
+
+
+.process-grid > div {
+  padding: 30px 25px 30px 0;
+
+  border-right: 1px solid #adb4b0;
+
+  min-height: 230px;
+}
+
+
+.process-grid > div:not(:first-child) {
+  padding-left: 25px;
+}
+
+
+.process-grid > div:last-child {
+  border-right: none;
+}
+
+
+.process-grid span {
+  font-size: 11px;
+
+  color: #75807b;
+}
+
+
+.process-grid h3 {
+  margin: 30px 0 12px;
+
+  font-size: 22px;
+}
+
+
+.process-grid p {
+  font-size: 14px;
+
+  color: #626c67;
+}
+
+
+
+/* ---------- CASE FEATURE ---------- */
+
+.case-feature {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 720px;
+
+  background: white;
+}
+
+
+.case-feature-image {
+  padding: 70px 0 70px 7%;
+}
+
+
+.case-feature-image .image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  min-height: 580px;
+}
+
+
+.case-feature-copy {
+  padding: 120px 12%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.case-feature-copy h2 {
+  font-size: clamp(40px, 4.5vw, 68px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 35px;
+}
+
+
+.case-feature-copy > p:not(.eyebrow) {
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+
+  color: #5c6661;
+}
+
+
+
+/* ---------- PRINCIPLES ---------- */
+
+.principles {
+  padding: 140px 8%;
+
+  background: #0a2a40;
+
+  color: white;
+}
+
+
+.principles-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 60px;
+
+  border-top: 1px solid #59615e;
+}
+
+
+.principles-grid > div {
+  padding: 35px 30px 20px 0;
+}
+
+
+.principles-grid span {
+  font-size: 11px;
+
+  color: #aab5b0;
+}
+
+
+.principles-grid h3 {
+  font-size: 25px;
+
+  margin: 30px 0 15px;
+}
+
+
+.principles-grid p {
+  color: #bfc6c2;
+
+  max-width: 280px;
+}
+
+
+
+/* ---------- FINAL IMAGE ---------- */
+
+.case-final-image {
+  padding: 100px 5%;
+
+  background: white;
+}
+
+
+.case-final-image .image-placeholder {
+  min-height: 700px;
+}
+
+
+
+/* ---------- OUTCOME ---------- */
+
+.case-outcome {
+  padding: 150px 12%;
+
+  background: #c2d3c9;
+}
+
+
+.case-outcome h2 {
+  font-size: clamp(45px, 6vw, 88px);
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+
+  max-width: 1200px;
+}
+
+
+.case-outcome > p:last-child {
+  margin-top: 45px;
+
+  max-width: 650px;
+
+  font-size: 19px;
+
+  line-height: 1.7;
+}
+
+
+
+/* ---------- PROJECT NAVIGATION ---------- */
+
+.project-navigation {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  background: white;
+}
+
+
+.project-navigation a {
+  padding: 70px 8%;
+
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.all-work {
+  font-size: 17px;
+}
+
+
+.next-project {
+  background: #0a2a40;
+
+  color: white;
+}
+
+
+.next-project span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+
+.next-project strong {
+  font-size: 27px;
+}
+
+
+
+/* =====================================================
+   CASE STUDY TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .case-hero {
+    grid-template-columns: 1fr;
+  }
+
+
+  .case-number {
+    align-items: flex-start;
+  }
+
+
+  .project-overview,
+  .case-text-section,
+  .case-feature {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .case-feature-image {
+    padding: 60px 7% 0;
+  }
+
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .process-grid > div {
+    border-bottom: 1px solid #adb4b0;
+  }
+
+
+  .principles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+
+/* =====================================================
+   CASE STUDY MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .case-hero {
+    padding: 80px 7% 60px;
+  }
+
+
+  .case-hero-copy h1 {
+    letter-spacing: -4px;
+  }
+
+
+  .case-number strong {
+    font-size: 60px;
+  }
+
+
+  .case-hero-image {
+    padding: 0 7% 70px;
+  }
+
+
+  .case-hero-image .image-placeholder {
+    min-height: 420px;
+  }
+
+
+  .project-overview,
+  .case-text-section {
+    grid-template-columns: 1fr;
+
+    padding: 90px 7%;
+  }
+
+
+  .project-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .case-gallery {
+    grid-template-columns: 1fr;
+
+    padding: 80px 7%;
+  }
+
+
+  .case-full-image {
+    padding: 60px 7%;
+  }
+
+
+  .case-full-image .image-placeholder {
+    min-height: 380px;
+  }
+
+
+  .case-process {
+    padding: 90px 7%;
+  }
+
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .process-grid > div {
+    border-right: none;
+
+    padding: 25px 0 !important;
+
+    min-height: auto;
+  }
+
+
+  .principles {
+    padding: 90px 7%;
+  }
+
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .case-final-image {
+    padding: 70px 7%;
+  }
+
+
+  .case-final-image .image-placeholder {
+    min-height: 400px;
+  }
+
+
+  .case-outcome {
+    padding: 100px 7%;
+  }
+
+
+  .case-outcome h2 {
+    letter-spacing: -2px;
+  }
+
+
+  .project-navigation {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+
+/* =====================================================
+   REAL CASE STUDY IMAGES
+===================================================== */
+
+.case-hero-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.image-placeholder img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}/* =====================================================
+   STICKY SITE HEADER
+===================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  width: 100%;
+  min-height: 82px;
+  padding: 0 5%;
+
+  background: #0a2a40;
+  box-sizing: border-box;
+
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+
+/* NAME — LEFT */
+
+.header-name {
+  justify-self: start;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+
+/* IMAGE LOGO — TRUE CENTRE */
+
+.header-logo {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  display: block;
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+}
+
+
+/* NAVIGATION — RIGHT */
+
+.main-nav {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: rgba(255,255,255,0.82);
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+    min-height: 72px;
+    padding: 0 24px;
+  }
+
+  .header-logo {
+    justify-self: end;
+  }
+
+  .header-logo img {
+    height: 40px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .header-name {
+    font-size: 12px;
+  }
+}
+
+/* =====================================================
+   PORTFOLIO SYSTEM CLEANUP — 2026-10-03
+   Shared header, mobile navigation and resilient images.
+===================================================== */
+
+/* Sticky header participates in layout, so no body offset is needed. */
+body {
+  padding-top: 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: auto;
+  z-index: 9999;
+  width: 100%;
+  height: auto;
+  min-height: 82px;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  background: #0a2a40;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 2px 12px rgba(0,0,0,.10);
+}
+
+.header-name {
+  justify-self: start;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.header-logo {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo img {
+  display: block;
+  width: auto;
+  height: 48px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.main-nav {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: rgba(255,255,255,.86);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: #fff;
+  opacity: 1;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px auto;
+  background: #fff;
+  transform-origin: center;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Make every intentional placeholder visible and stable. */
+.image-placeholder {
+  position: relative;
+  width: 100%;
+  background: #c2d3c9;
+  color: #53645c;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  body { padding-top: 0; }
+
+  .site-header {
+    min-height: 70px;
+    padding: 0 20px;
+    grid-template-columns: 1fr auto auto;
+    column-gap: 14px;
+  }
+
+  .header-name {
+    font-size: 11px;
+    letter-spacing: .11em;
+  }
+
+  .header-logo {
+    justify-self: center;
+  }
+
+  .header-logo img {
+    height: 38px;
+    max-width: 90px;
+  }
+
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 18px;
+    background: #0a2a40;
+    border-top: 1px solid rgba(255,255,255,.1);
+    box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    display: block;
+    padding: 14px 4px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255,255,255,.11);
+  }
+
+  .main-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  #work,
+  #capabilities,
+  #about,
+  #contact {
+    scroll-margin-top: 82px;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header { padding: 0 14px; column-gap: 9px; }
+  .header-name { font-size: 10px; letter-spacing: .08em; }
+  .header-logo img { height: 34px; max-width: 76px; }
+  .menu-toggle { width: 38px; height: 38px; padding: 7px; }
+}
